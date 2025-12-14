@@ -12,11 +12,8 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <ThemeToggle />
-
       <StarBackground />
-
       <NavBar />
-
       <main>
         <HeroSection />
         <AboutSection />
@@ -24,7 +21,6 @@ const Home = () => {
         <ProjectsSection/>
         <ContactSection/>
       </main>
-
       <Footer/>
     </div>
   )

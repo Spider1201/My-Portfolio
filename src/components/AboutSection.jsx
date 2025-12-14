@@ -1,4 +1,4 @@
-import { Code, User, Briefcase } from 'lucide-react'
+import { Code, User, Briefcase, House } from 'lucide-react'
 import React from 'react'
 
 const AboutSection = () => {
@@ -10,7 +10,7 @@ const AboutSection = () => {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12 items-center '>
           <div className='space-y-6'>
-            <h3 className='text-2xl  font-semibold'>Passionate Software Devloper & Architect </h3>
+            <h3 className='text-2xl  font-semibold'>Passionate Software Developer & Architectural Designer</h3>
             <p className="text-muted-foreground">
               I am a software developer with over 3 years of experience in technology, specializing in the design and development of scalable, maintainable web applications. I work with JavaScript, React, Node.js, and modern web technologies, and I place strong emphasis on clean code, performance optimization, and best engineering practices.
 
@@ -55,7 +55,7 @@ const AboutSection = () => {
             <div className='gradient-border p-6 card-hover'>
               <div className='flex items-start gap-4 '>
                 <div className='p-3 rounded pg-primary/10'>
-                  <Briefcase h-6 w-6 text-primary />
+                  <House h-6 w-6 text-primary />
                 </div>
                 <div className='text-left'>
                   <h4 className="font-semibold text-lg">Architectural Design</h4>
@@ -65,17 +65,19 @@ const AboutSection = () => {
                 </div> 
               </div>
             </div>
-            <div className='gradient-border p-6 card-hover'>
-              <div className='flex items-start gap-4 '>
-                <div className='p-3 rounded pg-primary/10'>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
                   <Briefcase h-6 w-6 text-primary />
                 </div>
-                <div className='text-left'>
-                  <h4 className="font-semibold text-lg">Personal Insight & Readings</h4>
-                  <p className='text-muted-foreground'>
-                    Personalized numerology and astrology readings for clarity and insight.
+
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <p className="text-muted-foreground">
+                    Leading projects from conception to completion with agile
+                    methodologies.
                   </p>
-                </div> 
+                </div>
               </div>
             </div>
           </div>

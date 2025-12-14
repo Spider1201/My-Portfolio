@@ -38,16 +38,14 @@ const ProjectsSection = () => {
             image: "/projects/3D-Bungalow.jpg",
             tags: ["Revit", "3D Modeling"],
             demoUrl: "/projects/3D-Bungalow.jpg",
-            gitUrl: ""
         },
         {
             id: 1,
             title: "Modern Duplex – 3D Night Rendering",
             description: "3D visualization of a modern house plan with night lighting and landscaping features with night aesthetics.",
-            image: "/projects/Duplex1.jpg",
+            image: "/projects/3D-fountain.jpg",
             tags: ["Revit", "Plans", "3D Modeling"],
-            demoUrl: "/projects/Duplex1.jpg",
-            gitUrl: ""
+            demoUrl: "/projects/3D-fountain.jpg",
         },
     ]
     return (

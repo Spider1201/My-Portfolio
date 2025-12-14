@@ -1,39 +1,57 @@
 import React, { useState } from 'react'
 import {cn} from "@/lib/utils"
+import {
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiReact,
+    SiReactos,
+    SiPython,
+    SiNodedotjs,
+    SiExpress,
+    SiMongodb,
+    SiJson,
+    SiGit,
+    SiGithub,
+    SiExpo,
+    SiAutodeskrevit,     // optional
+} from "react-icons/si";
+import { FaJava } from 'react-icons/fa';
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { PiMicrosoftWordLogo } from "react-icons/pi";
+import { VscTerminalPowershell } from "react-icons/vsc";
 
 const SkillsSection = () => {
    
 
-    const skills = [
-        // Frontend
-        { name: "HTML/CSS", level: 95, category: "Frontend" },
-        { name: "JavaScript", level: 90, category: "Frontend" },
-        { name: "React", level: 95, category: "Frontend" },
-        { name: "React Native", level: 75, category: "Frontend" },
+  const skills = [
+    // Frontend
+    { name: "HTML", icon: <SiHtml5 size={38} />, category: "Frontend" },
+    { name: "CSS", icon: <SiCss3 size={38} />, category: "Frontend" },
+    { name: "JavaScript", icon: <SiJavascript size={38} />, category: "Frontend" },
+    { name: "React", icon: <SiReact size={38} />, category: "Frontend" },
+    { name: "React Native", icon: <SiReactos size={38}/>, category: "Frontend"},
 
-        // Backend
-        { name: "Java", level: 90, category: "Backend" },
-        { name: "Python", level: 75, category: "Backend" },
-        { name: "Node.js", level: 85, category: "Backend" },
-        { name: "Express.js", level: 75, category: "Backend" },
-        { name: "MongoDB", level: 80, category: "Backend" },
-        { name: "RESTful APIs", level: 70, category: "Backend" },
-        { name: "JSON", level: 80, category: "Backend" },
+    // Backend
+    { name: "Java", icon: <FaJava size={38} />, category: "Backend" },
+    { name: "Python", icon: <SiPython size={38} />, category: "Backend" },
+    { name: "Node.js", icon: <SiNodedotjs size={38} />, category: "Backend" },
+    { name: "Express.js", icon: <SiExpress size={38} />, category: "Backend" },
+    { name: "MongoDB", icon: <SiMongodb size={38} />, category: "Backend" },
+    { name: "JSON", icon: <SiJson size={38} />, category: "Backend" },
 
-        // Tools
-        { name: "Git & GitHub", level: 90, category: "Tools" },
-        { name: "VS Code", level: 95, category: "Tools" },
-        { name: "IntelliJ IDEA", level: 90, category: "Tools" },
-        { name: "Expo", level: 75, category: "Tools" },
-        { name: "Command Line / Terminal", level: 80, category: "Tools" },
-        { name: "Microsoft Office Suite", level: 95, category: "Tools" },
-        { name: "Autodesk Revit", level: 96, category: "Tools" },
+    // Tools
+    { name: "Git", icon: <SiGit size={38} />, category: "Tools" },
+    { name: "GitHub", icon: <SiGithub size={38} />, category: "Tools" },
+    { name: "VS Code", icon: <BiLogoVisualStudio size={38} />, category: "Tools" },
+    { name: "Expo", icon: <SiExpo size={38} />, category: "Tools" },
+    { name: "Command Line / Terminal", icon: <VscTerminalPowershell size={38} />, category: "Tools" },
+    { name: "Microsoft Office Suite", icon: <PiMicrosoftWordLogo size={38} />, category: "Tools" }, 
+    { name: "Autodesk Revit", icon: <SiAutodeskrevit size={38} />, category: "Tools" },   
+];
+        
 
-        { name: "Numerology", level: 90, category: "Consultation" },
-        { name: "Astrology", level: 90, category: "Consultation" },
-    ];
-
-    const categories = ["all", "Frontend", "Backend", "Tools", "Consultation",]
+    const categories = ["all", "Frontend", "Backend", "Tools",]
      const [activeCategory, setActiveCategory] = useState("all");
     const filteredSkills = skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory)
 
@@ -60,16 +78,9 @@ const SkillsSection = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {filteredSkills.map((skill, key) => (
                         <div key={key} className='bg-card p-6 rounded-lg shadow-xs card-hover'>
-                            <div className='text-left mb-4 '>
-                                <h3 className='font-semibold text-lg'>{skill.name}</h3>
-                            </div>
-                            <div className='w-full bg-secondary/50 h-2 rounded-full overflow-hidden'>
-                                <div className='bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]'
-                                    style={{ width: skill.level + "%" }}
-                                />
-                            </div>
-                            <div className='text-right mt-1'>
-                                <span className='text-sm text-muted-foreground'>{skill.level}%</span>
+                            <div className='text-left mb-4 flex justify-between'>
+                                {skill.icon}
+                                <h3 className='font-semibold text-lg hover:text-primary'>{skill.name}</h3>
                             </div>
                         </div>
                     ))}
