@@ -14,7 +14,7 @@ const ProjectsSection = () => {
             gitUrl: "https://github.com/Spider1201/9JANews"
         },
         {
-            id: 1,
+            id: 2,
             title: "Restuarant Website",
             description: "Our restaurant delivers quality dining with carefully crafted dishes, fresh ingredients, and exceptional service—creating a memorable experience for every guest.",
             image: "/projects/restuarant.png",
@@ -23,7 +23,7 @@ const ProjectsSection = () => {
             gitUrl: ""
         },
         {
-            id: 1,
+            id: 3,
             title: "Medi-Care platform",
             description: "We offer trusted medical care focused on patient well-being, combining experienced professionals, advanced technology, and personalized treatment.",
             image: "/projects/medi-care.png",
@@ -32,7 +32,16 @@ const ProjectsSection = () => {
             gitUrl: "https://github.com/Spider1201/medi-care"
         },
         {
-            id: 1,
+            id: 4,
+            title: "Location Finder App",
+            description: "A mobile app that helps users discover nearby places with real-time directions and interactive maps. Built with performance and usability in mind.",
+            image: "/projects/Location.jpg",
+            tags: ["React-Native"],
+            demoUrl: "/projects/Location.jpg",
+            gitUrl: "https://github.com/Spider1201/Location-Finder"
+        },
+        {
+            id: 5,
             title: "3-Bedroom Modern Bungalow – 3D Design ",
             description: "Modern 3-bedroom bungalow visualized in 3D with thoughtful layout and style.",
             image: "/projects/3D-Bungalow.jpg",
@@ -40,7 +49,7 @@ const ProjectsSection = () => {
             demoUrl: "/projects/3D-Bungalow.jpg",
         },
         {
-            id: 1,
+            id: 6,
             title: "Modern Duplex – 3D Night Rendering",
             description: "3D visualization of a modern house plan with night lighting and landscaping features with night aesthetics.",
             image: "/projects/3D-fountain.jpg",
